@@ -21,6 +21,43 @@
 //     Green
 // }
 // let backgroundColor = color.Green;
-var message;
-message = 'abc';
-var endsWithC = message.endsWith('c');
+// let message;
+// message = 'abc';
+// let endsWithC = (<string>message).endsWith('c');
+// let alternative = (message as string).endsWith('c');
+// //=============================normal function
+// let log = function (message) {
+//     console.log(message);
+// }
+//
+// //=============================arrow function
+// let doLog = (message) => {
+//     console.log(message);
+// }
+// interface Point {
+//     x: number,
+//     y: number
+// }
+// let drawPoint = (point: Point) => {
+//
+// }
+//
+// drawPoint({
+//     x: 1,
+//     y: 3
+// });
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x, 'Y: ' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        //...
+    };
+    return Point;
+}());
+var point = new Point();
+point.y = 1;
+point.x = 2;
+point.draw();

@@ -24,7 +24,49 @@
 // let backgroundColor = color.Green;
 
 
-let message;
-message = 'abc';
-let endsWithC = message.endsWith('c');
+// let message;
+// message = 'abc';
+// let endsWithC = (<string>message).endsWith('c');
+// let alternative = (message as string).endsWith('c');
 
+
+// //=============================normal function
+// let log = function (message) {
+//     console.log(message);
+// }
+//
+// //=============================arrow function
+// let doLog = (message) => {
+//     console.log(message);
+// }
+
+// interface Point {
+//     x: number,
+//     y: number
+// }
+// let drawPoint = (point: Point) => {
+//
+// }
+//
+// drawPoint({
+//     x: 1,
+//     y: 3
+// });
+
+
+class Point {
+    x: number;
+    y: number;
+
+    draw ()  {
+        console.log('X: ' + this.x, 'Y: ' + this.y);
+    }
+    getDistance (another: Point) {
+        //...
+    }
+
+}
+let point = new Point();
+point.y = 1;
+point.x = 2;
+point.draw();
